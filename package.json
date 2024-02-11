@@ -1,0 +1,19 @@
+{
+  "name": "app-files-ctic",
+  "version": "1.0.1",
+  "description": "app de uploads de arquivos",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "web",
+    "node",
+    "uploads",
+    "express",
+    "multer",
+    "git"
+  ],
+  "author": "lucas dos santos marques",
+  "license": "MIT"
+}
