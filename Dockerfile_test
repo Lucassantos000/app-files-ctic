@@ -1,0 +1,20 @@
+# Use a imagem oficial do Node.js como imagem base. Escolha a tag específica conforme sua necessidade.
+FROM node:lts
+
+# Define o diretório de trabalho no container
+WORKDIR /usr/src/app
+
+# Copia os arquivos de configuração do projeto (package.json e, se houver, package-lock.json) para o diretório de trabalho
+COPY package*.json ./
+
+# Instala as dependências do projeto, incluindo o Nodemon como dependência de desenvolvimento
+RUN npm install
+
+# Expõe a porta que a aplicação usa
+EXPOSE 8085
+
+# Comando para iniciar a aplicação via Nodemon
+CMD ["npx", "nodemon", "app.js"]
+
+
+# docker build -f Dockerfile_test -t nome_da_sua_imagem .
